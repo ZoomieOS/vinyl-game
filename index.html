@@ -349,31 +349,78 @@
     gap:8px;
     flex-wrap:wrap;
     justify-content:center;
-    max-width:360px;
+    max-width:400px;
   }
   .genre-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:5px;
     font-size:0.72rem;
     font-weight:700;
     padding:5px 11px;
     border-radius:999px;
     background:var(--paper-edge);
     color:var(--ink);
-    opacity:0.4;
+    opacity:0.45;
     transition: opacity 240ms ease, background 240ms ease, color 240ms ease, transform 240ms ease;
+  }
+  .genre-badge .badge-count{
+    font-size:0.66rem;
+    font-weight:600;
+    opacity:0.75;
+    font-variant-numeric: tabular-nums;
   }
   .genre-badge.hit{
     opacity:1;
     background: linear-gradient(180deg, var(--ember-soft), var(--ember));
     color:var(--dusk);
-    transform: scale(1.04);
+    transform: scale(1.03);
+  }
+  .genre-badge.complete{
+    background: linear-gradient(180deg, #e8c774, #c9a15c);
+    color:#3a2433;
   }
 
-  .tally{
+  .progress{
     font-size:0.82rem;
     color:var(--ink);
     opacity:0.62;
+    text-align:center;
   }
-  .tally strong{ font-weight:700; color:var(--rose-deep); opacity:1; }
+  .progress strong{ font-weight:700; color:var(--rose-deep); opacity:1; }
+
+  .completion-banner{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:0.82rem;
+    font-weight:600;
+    color:var(--rose-deep);
+    background: rgba(var(--glow), 0.16);
+    border:1px solid rgba(var(--glow), 0.4);
+    padding:10px 16px;
+    border-radius:12px;
+    text-align:center;
+    max-width:42ch;
+  }
+
+  .reset-btn{
+    font-family:'Manrope', sans-serif;
+    font-size:0.76rem;
+    font-weight:600;
+    color:var(--ink);
+    opacity:0.5;
+    background:none;
+    border:none;
+    text-decoration:underline;
+    text-underline-offset:2px;
+    cursor:pointer;
+    padding:4px;
+    transition: opacity 160ms ease, color 160ms ease;
+  }
+  .reset-btn:hover{ opacity:0.85; }
+  .reset-btn:focus-visible{ outline:2px solid var(--rose); outline-offset:2px; }
+  .reset-btn.confirming{ opacity:1; color:var(--rose-deep); text-decoration:none; font-weight:700; }
 
   footer.note-of-page{
     font-size:0.72rem;
@@ -387,7 +434,7 @@
   @media (prefers-reduced-motion: reduce){
     .wheel{ transition: transform 600ms linear; }
     .track-card{ transition:none; }
-    button.light, .genre-badge{ transition:none; }
+    button.light, .genre-badge, .reset-btn{ transition:none; }
   }
 </style>
 </head>
@@ -435,9 +482,11 @@
   </div>
 
   <div class="playlist" id="playlist"></div>
-  <div class="tally"><span>Треков подобрано:</span> <strong id="count">0</strong></div>
+  <p class="progress">Собрано треков: <strong id="count">0</strong> из <strong id="total">80</strong></p>
+  <div class="completion-banner" id="completionBanner" hidden>🎉 <span>Вся коллекция собрана — можно крутить дальше просто так или сбросить и начать заново.</span></div>
+  <button class="reset-btn" id="resetBtn" type="button">Сбросить прогресс</button>
 
-  <footer class="note-of-page">Названия и авторы треков — реальные, а вот совпадение с тобой — не случайное. Эта пластинка крутится не для случайного зрителя, а именно для тебя.</footer>
+  <footer class="note-of-page">Названия и авторы треков — реальные, а вот совпадение с тобой — не случайное. Прогресс сохраняется в этом браузере, пока не соберёшь всю коллекцию или не сбросишь сам(а).</footer>
 </div>
 
 <script src="script.js" defer></script>
