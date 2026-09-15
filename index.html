@@ -1,5 +1,10 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
 <title>Виниловая рулетка</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Личная игра-рулетка: крути пластинку, получай нишевый трек и комплимент под его настроение.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Manrope:wght@400;500;600;700;800&display=swap">
@@ -199,7 +204,7 @@
   .slice-label{
     position:absolute;
     top:50%; left:50%;
-    width:120px;
+    width:62px;
     text-align:center;
     font-size:0.68rem;
     font-weight:700;
@@ -207,7 +212,7 @@
     color:#fff6ea;
     text-shadow: 0 1px 3px rgba(0,0,0,0.4);
     letter-spacing:0.01em;
-    transform-origin:0 0;
+    transform:translate(-50%, -50%);
     pointer-events:none;
   }
   .hub{
@@ -385,6 +390,8 @@
     button.light, .genre-badge{ transition:none; }
   }
 </style>
+</head>
+<body>
 
 <div class="stage">
   <p class="eyebrow">Игра-ассоциация · инди-подборка</p>
@@ -433,194 +440,6 @@
   <footer class="note-of-page">Названия и авторы треков — реальные, а вот совпадение с тобой — не случайное. Эта пластинка крутится не для случайного зрителя, а именно для тебя.</footer>
 </div>
 
-<script>
-(function(){
-  "use strict";
-
-  // order matches the conic-gradient slices (clockwise from top)
-  var genres = [
-    { key:'pop',     label:'Дрим-поп' },
-    { key:'disco',   label:'Лоу-фай' },
-    { key:'latino',  label:'Пост-панк' },
-    { key:'rock',    label:'Соул/фанк' },
-    { key:'rnb',     label:'Латино-альт' },
-    { key:'indie',   label:'Электроника' },
-    { key:'jazz',    label:'Джаз' },
-    { key:'meladze', label:'Меладзе' }
-  ];
-
-  var pools = {
-    pop: [
-      { song:'«Space Song» — Beach House', query:'Space Song Beach House', text:'Ты как эта песня — вроде тянется медленно, а оторваться невозможно.' },
-      { song:'«Sarah» — Alex G', query:'Sarah Alex G', text:'Ты из тех редких людей, ради которых вслушиваешься даже в самое тихое.' },
-      { song:'«Archie, Marry Me» — Alvvays', query:'Archie Marry Me Alvvays', text:'Жениться не предлагаю, но идею этой песни в целом понимаю.' }
-    ],
-    disco: [
-      { song:'«Pretty Girl» — Clairo', query:'Pretty Girl Clairo', text:'Название говорящее, комментарии здесь явно лишние.' },
-      { song:'«girls» — girl in red', query:'girls girl in red', text:'Подозреваю, у тебя тоже есть плейлист «для одного конкретного человека». Похоже, сегодня это я.' },
-      { song:'«Everytime» — Boy Pablo', query:'Everytime Boy Pablo', text:'Название точное — примерно с такой частотой я о тебе думаю.' }
-    ],
-    latino: [
-      { song:'«Big Shot» — Fontaines D.C.', query:'Big Shot Fontaines D.C.', text:'Веди себя как важная персона сколько хочешь — тебе правда идёт.' },
-      { song:'«Narrator» — Squid', query:'Narrator Squid', text:'Если бы у нашего разговора был рассказчик, ты бы точно была его любимым персонажем.' },
-      { song:'«Scratchcard Lanyard» — Dry Cleaning', query:'Scratchcard Lanyard Dry Cleaning', text:'Твой сухой юмор работает примерно как эта песня — без нажима, но безотказно.' }
-    ],
-    rock: [
-      { song:'«Free» — Sault', query:'Free Sault', text:'Рядом с тобой на удивление легко быть собой, без лишнего напряга.' },
-      { song:'«Twice» — Little Dragon', query:'Twice Little Dragon', text:'Заметил(а) кое-что дважды — и оба раза это была твоя улыбка.' },
-      { song:'«Virile» — Moses Sumney', query:'Virile Moses Sumney', text:'Название говорит само за себя, но ты держишься с этим куда скромнее, чем могла бы.' }
-    ],
-    rnb: [
-      { song:'«Soy Yo» — Bomba Estéreo', query:'Soy Yo Bomba Estereo', text:'У тебя та же уверенность «я — это я», и она подкупает с первых минут.' },
-      { song:'«Tú Sí Sabes Quererme» — Natalia Lafourcade', query:'Tu Si Sabes Quererme Natalia Lafourcade', text:'Переводится как «ты точно умеешь любить» — подозреваю, не только в песне это про тебя.' },
-      { song:'«Malamente» — Rosalía', query:'Malamente Rosalia', text:'Название переводится как «плохо» — а ощущение от разговора с тобой ровно противоположное.' }
-    ],
-    indie: [
-      { song:'«Kiara» — Bonobo', query:'Kiara Bonobo', text:'Трек спокойный, но затягивает без предупреждения — прямо как разговор с тобой.' },
-      { song:'«A Walk» — Tycho', query:'A Walk Tycho', text:'С тобой даже самая обычная прогулка звучала бы как саундтрек.' },
-      { song:'«Jasmine» — Jai Paul', query:'Jasmine Jai Paul', text:'Эта песня культовая, потому что редкая — примерно как ты.' }
-    ],
-    jazz: [
-      { song:'«My Funny Valentine» — Chet Baker', query:'My Funny Valentine Chet Baker', text:'Мелодия неидеальная, но именно поэтому цепляет — примерно как твоё чувство юмора.' },
-      { song:'«Feeling Good» — Nina Simone', query:'Feeling Good Nina Simone', text:'У тебя похожая суперсила — заходишь в комнату, и настроение сразу меняется.' },
-      { song:'«Waltz for Debby» — Bill Evans', query:'Waltz for Debby Bill Evans', text:'Ты как этот вальс — на первый взгляд простая мелодия, а слушать можно бесконечно.' }
-    ],
-    meladze: [
-      { song:'«Самба белого мотылька» — Валерий Меладзе', query:'Самба белого мотылька Валерий Меладзе', text:'У тебя такая же лёгкая походка, как у мотылька из этой песни — не поймать, но хочется.' },
-      { song:'«Небеса» — Валерий Меладзе', query:'Небеса Валерий Меладзе', text:'Слегка пафосно, но когда ты улыбаешься, я в целом понимаю ход мысли.' },
-      { song:'«Не тревожь мне душу, скрипка» — Валерий Меладзе', query:'Не тревожь мне душу скрипка Валерий Меладзе', text:'Обычно я так не реагирую на музыку, но с тобой, кажется, тоже что-то тревожится.' }
-    ]
-  };
-
-  var decks = {};
-  var opened = 0;
-  var currentRotation = 0;
-  var spinning = false;
-
-  var wheelEl = document.getElementById('wheel');
-  var spinBtn = document.getElementById('spinBtn');
-  var hintEl = document.getElementById('hint');
-  var cardEl = document.getElementById('trackCard');
-  var genreEl = document.getElementById('trackGenre');
-  var songEl = document.getElementById('trackSong');
-  var complimentEl = document.getElementById('trackCompliment');
-  var spotifyEl = document.getElementById('trackSpotify');
-  var countEl = document.getElementById('count');
-  var playlistEl = document.getElementById('playlist');
-
-  function shuffle(arr){
-    var d = arr.slice();
-    for(var i = d.length - 1; i > 0; i--){
-      var j = Math.floor(Math.random() * (i + 1));
-      var t = d[i]; d[i] = d[j]; d[j] = t;
-    }
-    return d;
-  }
-
-  function drawTrack(key){
-    if(!decks[key] || decks[key].length === 0){
-      decks[key] = shuffle(pools[key]);
-    }
-    return decks[key].pop();
-  }
-
-  function positionLabels(){
-    var zone = document.querySelector('.wheel-zone');
-    var radius = zone.clientWidth / 2 * 0.62;
-    var sliceAngle = 360 / genres.length;
-    genres.forEach(function(g, i){
-      var center = i * sliceAngle + sliceAngle / 2; // degrees from top, clockwise
-      var rad = (center - 90) * Math.PI / 180; // convert so 0deg(top) -> -90 in standard coords
-      var x = Math.cos(rad) * radius;
-      var y = Math.sin(rad) * radius;
-      var el = document.getElementById('lbl' + i);
-      if(el){
-        el.style.left = (50 + (x / zone.clientWidth) * 100) + '%';
-        el.style.top = (50 + (y / zone.clientWidth) * 100) + '%';
-        el.style.transform = 'translate(-50%, -50%)';
-        el.style.width = '62px';
-      }
-    });
-  }
-
-  function buildPlaylist(){
-    playlistEl.innerHTML = '';
-    genres.forEach(function(g){
-      var b = document.createElement('span');
-      b.className = 'genre-badge';
-      b.id = 'badge-' + g.key;
-      b.textContent = g.label;
-      playlistEl.appendChild(b);
-    });
-  }
-
-  function markPlaylist(key){
-    var b = document.getElementById('badge-' + key);
-    if(b) b.classList.add('hit');
-  }
-
-  function spin(){
-    if(spinning) return;
-    spinning = true;
-    spinBtn.disabled = true;
-    hintEl.textContent = 'Крутится...';
-    cardEl.classList.remove('show');
-
-    var sliceAngle = 360 / genres.length;
-    var targetIndex = Math.floor(Math.random() * genres.length);
-    var sliceCenter = targetIndex * sliceAngle + sliceAngle / 2;
-    var jitter = (Math.random() * (sliceAngle * 0.5)) - (sliceAngle * 0.25);
-    var mod = ((currentRotation % 360) + 360) % 360;
-    var needed = (360 - sliceCenter - mod) % 360;
-    var extraSpins = 5 * 360;
-    currentRotation += extraSpins + needed + jitter;
-
-    wheelEl.style.transform = 'rotate(' + currentRotation + 'deg)';
-
-    setTimeout(function(){
-      var genre = genres[targetIndex];
-      var track = drawTrack(genre.key);
-      genreEl.textContent = genre.label;
-      songEl.textContent = track.song;
-      complimentEl.textContent = track.text;
-      spotifyEl.href = 'https://open.spotify.com/search/' + encodeURIComponent(track.query);
-      spotifyEl.hidden = false;
-      cardEl.classList.add('show');
-      opened += 1;
-      countEl.textContent = String(opened);
-      markPlaylist(genre.key);
-      hintEl.textContent = 'Крути ещё раз — плейлист продолжается';
-      spinBtn.disabled = false;
-      spinning = false;
-    }, 3300);
-  }
-
-  spinBtn.addEventListener('click', spin);
-  window.addEventListener('resize', positionLabels);
-
-  buildPlaylist();
-  positionLabels();
-
-  function start(data){
-    if(data){
-      if(typeof data.opened === 'number') { opened = data.opened; countEl.textContent = String(opened); }
-      if(typeof data.rotation === 'number') { currentRotation = data.rotation; wheelEl.style.transition='none'; wheelEl.style.transform='rotate(' + currentRotation + 'deg)'; requestAnimationFrame(function(){ wheelEl.style.transition=''; }); }
-      if(Array.isArray(data.hits)){ data.hits.forEach(markPlaylist); }
-    }
-    try{
-      window.claude?.hot?.snapshot?.(function(){
-        var hits = genres.filter(function(g){
-          var b = document.getElementById('badge-' + g.key);
-          return b && b.classList.contains('hit');
-        }).map(function(g){ return g.key; });
-        return { opened: opened, rotation: currentRotation, hits: hits };
-      });
-    }catch(e){}
-  }
-
-  try{
-    if(window.claude?.hot?.ready){ window.claude.hot.ready(start); }
-    else { start(window.claude?.hot?.data ?? {}); }
-  }catch(e){ start({}); }
-})();
-</script>
+<script src="script.js" defer></script>
+</body>
+</html>
