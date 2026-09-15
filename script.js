@@ -27,6 +27,9 @@
       { song: "«Ladykillers» — Lush", query: "Ladykillers Lush", text: "Название не совсем про тебя, но осторожность иногда не помешает." },
       { song: "«Doused» — DIIV", query: "Doused DIIV", text: "Звучит так, будто всё происходит под водой. Рядом с тобой — похожее чувство невесомости." },
       { song: "«Chinatown» — Wild Nothing", query: "Chinatown Wild Nothing", text: "Песня про то, как что-то ищешь и вдруг находишь. Кажется, понимаю, о чём." },
+      { song: "«Myth» — Beach House", query: "Myth Beach House", text: "Название говорит само за себя — иногда я тоже не уверен, что ты существуешь на самом деле, а не придумана слишком удачно." },
+      { song: "«In Undertow» — Alvvays", query: "In Undertow Alvvays", text: "Трек про то, как тебя потихоньку затягивает течением. Узнаю симптомы." },
+      { song: "«Sunburn» — Beach Fossils", query: "Sunburn Beach Fossils", text: "Название точное — от разговора с тобой действительно немного печёт." },
     ],
     disco: [
       { song: "«Pretty Girl» — Clairo", query: "Pretty Girl Clairo", text: "Комментировать название или сделать вид, что я выше этого? Выбираю первое." },
@@ -34,11 +37,14 @@
       { song: "«Everytime» — Boy Pablo", query: "Everytime Boy Pablo", text: "Название прямо описывает, с какой регулярностью ты лезешь мне в голову без спроса." },
       { song: "«Best Friend» — Rex Orange County", query: "Best Friend Rex Orange County", text: "Рано так говорить, но вайб этой песни мне определённо нравится." },
       { song: "«Lovers Rock» — TV Girl", query: "Lovers Rock TV Girl", text: "У тебя обаяние уровня трека, который внезапно решает весь вечер." },
-      { song: "«Chamber of Reflection» — Mac DeMarco", query: "Chamber of Reflection Mac DeMarco", text: "Название подходит для комнаты, где я думаю о тебе дольше, чем планировал(а)." },
+      { song: "«Chamber of Reflection» — Mac DeMarco", query: "Chamber of Reflection Mac DeMarco", text: "Название подходит для комнаты, где я думаю о тебе дольше, чем планировал." },
       { song: "«Coffee» — beabadoobee", query: "Coffee beabadoobee", text: "Трек короткий, но застревает надолго. Узнаю симптомы." },
       { song: "«Lo Que Siento» — Cuco", query: "Lo Que Siento Cuco", text: "Не всё нужно переводить, чтобы понять, о чём песня." },
       { song: "«Can I Call You Tonight?» — Dayglow", query: "Can I Call You Tonight Dayglow", text: "Вопрос из названия вполне себе актуальный." },
-      { song: "«comethru» — Jeremy Zucker", query: "comethru Jeremy Zucker", text: "Название звучит как инструкция, и я, кажется, готов(а) её выполнить." },
+      { song: "«comethru» — Jeremy Zucker", query: "comethru Jeremy Zucker", text: "Название звучит как инструкция, и я, кажется, готов её выполнить." },
+      { song: "«Easy» — Mac Ayres", query: "Easy Mac Ayres", text: "Название явно не про то, как мне даётся сохранять спокойствие рядом с тобой." },
+      { song: "«Dark Red» — Steve Lacy", query: "Dark Red Steve Lacy", text: "Трек тревожный и притягательный одновременно. Знакомое сочетание." },
+      { song: "«Kingston» — Faye Webster", query: "Kingston Faye Webster", text: "Спокойная песня о том, что скучаешь по конкретному человеку. Актуально." },
     ],
     latino: [
       { song: "«Big Shot» — Fontaines D.C.", query: "Big Shot Fontaines D.C.", text: "Веди себя как важная персона — тебе, кажется, действительно можно." },
@@ -51,10 +57,13 @@
       { song: "«Sports» — Viagra Boys", query: "Sports Viagra Boys", text: "Название нелепое, а трек почему-то работает. Есть в этом что-то общее с моей симпатией к тебе." },
       { song: "«Anxiety» — Preoccupations", query: "Anxiety Preoccupations", text: "Обычно я не признаюсь в этом под песню вслух. Тебе, наверное, можно." },
       { song: "«A Private Understanding» — Protomartyr", query: "A Private Understanding Protomartyr", text: "Название точно описывает то, что происходит между нами последние пару разговоров." },
+      { song: "«Chaise Longue» — Wet Leg", query: "Chaise Longue Wet Leg", text: "Название нелепое, трек гениальный. Ты тоже умеешь быть неожиданной." },
+      { song: "«Never Fight a Man with a Perm» — IDLES", query: "Never Fight a Man with a Perm IDLES", text: "Совет запомню, хотя вряд ли пригодится рядом с тобой." },
+      { song: "«A Hero's Death» — Fontaines D.C.", query: "A Heros Death Fontaines D.C.", text: "Название драматичное, но список правил из песни тебе, кажется, и не нужен — ты и так справляешься." },
     ],
     rock: [
       { song: "«Free» — Sault", query: "Free Sault", text: "Рядом с тобой почему-то не нужно ничего изображать — редкая штука." },
-      { song: "«Twice» — Little Dragon", query: "Twice Little Dragon", text: "Заметил(а) кое-что дважды за вечер, и оба раза виновата была твоя улыбка." },
+      { song: "«Twice» — Little Dragon", query: "Twice Little Dragon", text: "Заметил кое-что дважды за вечер, и оба раза виновата была твоя улыбка." },
       { song: "«Virile» — Moses Sumney", query: "Virile Moses Sumney", text: "Название говорит само за себя, но с таким названием рядом ты держишься на удивление скромно." },
       { song: "«Raisins Under the Sun» — Yussef Dayes", query: "Raisins Under the Sun Yussef Dayes", text: "У тебя такой же непредсказуемый и классный ритм в разговоре." },
       { song: "«Pace» — Nubya Garcia", query: "Pace Nubya Garcia", text: "Ты умеешь задавать темп разговору — редкий навык." },
@@ -63,6 +72,8 @@
       { song: "«Nakamarra» — Hiatus Kaiyote", query: "Nakamarra Hiatus Kaiyote", text: "Трек сложный, необычный и совсем не похож на остальные. Комплимент, если что." },
       { song: "«Cosmic Sans» — Cory Wong", query: "Cosmic Sans Cory Wong", text: "Название — шутка про шрифт. У тебя тоже неожиданно хорошее чувство юмора для случайного знакомства." },
       { song: "«Multiply» — Jamie Lidell", query: "Multiply Jamie Lidell", text: "Название точно описывает эффект от разговора с тобой на моё настроение." },
+      { song: "«Back Pocket» — Vulfpeck", query: "Back Pocket Vulfpeck", text: "Трек лёгкий, но собран настолько точно, что заслушаешься. Похожее у тебя с разговором." },
+      { song: "«Green Papaya» — Lianne La Havas", query: "Green Papaya Lianne La Havas", text: "Голос мягкий, но за ним чувствуется характер. Комбинация, которая мне нравится не только в музыке." },
     ],
     rnb: [
       { song: "«Soy Yo» — Bomba Estéreo", query: "Soy Yo Bomba Estereo", text: "У тебя та же уверенность «я — это я», и спорить с ней бесполезно." },
@@ -75,6 +86,8 @@
       { song: "«Telepatía» — Kali Uchis", query: "Telepatia Kali Uchis", text: "Название переводится как «телепатия» — иногда кажется, что это не так уж далеко от правды." },
       { song: "«Tu Falta De Querer» — Mon Laferte", query: "Tu Falta De Querer Mon Laferte", text: "Название мрачноватое, но явно не про эту переписку." },
       { song: "«De Donde Vengo Yo» — ChocQuibTown", query: "De Donde Vengo Yo ChocQuibTown", text: "Песня о гордости за то, откуда ты родом. Гордиться тобой, кажется, несложно в принципе." },
+      { song: "«Amárrame» — Mon Laferte", query: "Amarrame Mon Laferte", text: "Название переводится как «привяжи меня» — трек безобидный, а вот твоя харизма реально держит крепко." },
+      { song: "«Fiesta» — Bomba Estéreo", query: "Fiesta Bomba Estereo", text: "Название прямое — рядом с тобой действительно всё превращается в повод для хорошего настроения." },
     ],
     indie: [
       { song: "«Kiara» — Bonobo", query: "Kiara Bonobo", text: "Трек безобидный на вид, а потом внезапно понимаешь, что слушаешь его пятый раз подряд. Знакомое чувство." },
@@ -87,6 +100,9 @@
       { song: "«Baby» — Four Tet", query: "Baby Four Tet", text: "Название банальное, а трек — нет. С тобой похожая история: ожидания превышены." },
       { song: "«Glue» — Bicep", query: "Glue Bicep", text: "Название удачное — вечер с тобой действительно держится на чём-то похожем." },
       { song: "«Emerald Rush» — Jon Hopkins", query: "Emerald Rush Jon Hopkins", text: "Трек про внезапный прилив чего-то хорошего. Примерно это я и чувствую сейчас." },
+      { song: "«Innerbloom» — RÜFÜS DU SOL", query: "Innerbloom RUFUS DU SOL", text: "Трек десятиминутный и от этого только лучше. С разговором с тобой похожая история." },
+      { song: "«Atlas» — Bicep", query: "Atlas Bicep", text: "Название масштабное. У тебя тоже неплохо получается держать на себе целый вечер." },
+      { song: "«Gosh» — Jamie xx", query: "Gosh Jamie xx", text: "Трек начинается тихо и постепенно берёт своё. Ровно как симпатия к тебе." },
     ],
     jazz: [
       { song: "«My Funny Valentine» — Chet Baker", query: "My Funny Valentine Chet Baker", text: "Голос не идеальный, интонация чуть мимо — и именно поэтому веришь каждому слову. У тебя похожий эффект." },
@@ -99,6 +115,8 @@
       { song: "«'Round Midnight» — Thelonious Monk", query: "Round Midnight Thelonious Monk", text: "Трек написан для позднего часа и хорошей компании. Один пункт уже выполнен." },
       { song: "«Take Five» — Dave Brubeck", query: "Take Five Dave Brubeck", text: "Название — прямое указание взять паузу. Пять минут точно можно потратить на разговор с тобой." },
       { song: "«Cantaloupe Island» — Herbie Hancock", query: "Cantaloupe Island Herbie Hancock", text: "Мелодия расслабленная ровно настолько, насколько расслабленно я чувствую себя рядом с тобой." },
+      { song: "«In a Sentimental Mood» — Duke Ellington", query: "In a Sentimental Mood Duke Ellington", text: "Название точно описывает моё состояние в этом разговоре." },
+      { song: "«Goodbye Pork Pie Hat» — Charles Mingus", query: "Goodbye Pork Pie Hat Charles Mingus", text: "Название странное, мелодия трогательная. Похоже, у тебя тоже так — сначала не ожидаешь, а потом не забыть." },
     ],
     meladze: [
       { song: "«Самба белого мотылька» — Валерий Меладзе", query: "Самба белого мотылька Валерий Меладзе", text: "У тебя такая же лёгкая походка, как у мотылька из этой песни — не поймать, но хочется." },
@@ -107,15 +125,22 @@
       { song: "«Сэра» — Валерий Меладзе", query: "Сэра Валерий Меладзе", text: "Не знаю никакой Сэры, но твоё имя мне нравится куда больше." },
       { song: "«Небеса» — Валерий Меладзе", query: "Небеса Валерий Меладзе", text: "Название пафосное, согласен. Но когда ты улыбаешься, вопросов к автору не остаётся." },
       { song: "«Лимбо» — Валерий Меладзе", query: "Лимбо Валерий Меладзе", text: "Между «просто общаемся» и чем-то большим — примерно там мы сейчас и зависли." },
-      { song: "«Золотистый локон» — Валерий Меладзе", query: "Золотистый локон Валерий Меладзе", text: "Не уверен(а) насчёт локона, но что-то золотистое в тебе точно есть." },
+      { song: "«Золотистый локон» — Валерий Меладзе", query: "Золотистый локон Валерий Меладзе", text: "Не уверен насчёт локона, но что-то золотистое в тебе точно есть." },
       { song: "«Река времени» — Валерий Меладзе", query: "Река времени Валерий Меладзе", text: "Обычно время течёт незаметно. Рядом с тобой оно почему-то ощущается острее." },
       { song: "«Чёрная кошка» — Валерий Меладзе", query: "Черная кошка Валерий Меладзе", text: "Плохая примета — это не про тебя. Скорее наоборот." },
       { song: "«Королева автострады» — Валерий Меладзе", query: "Королева автострады Валерий Меладзе", text: "Громкое звание, но, кажется, тебе бы подошло без вопросов." },
+      { song: "«Посредине лета» — Валерий Меладзе", query: "Посредине лета Валерий Меладзе", text: "Название с сезоном могло бы и не совпасть, но настроение всё равно подходящее." },
+      { song: "«Мечта» — Валерий Меладзе", query: "Мечта Валерий Меладзе", text: "Название громкое, но, кажется, вполне обосновано в данном случае." },
     ],
   };
 
-  var TRACKS_PER_GENRE = 10;
-  var TOTAL_TRACKS = genres.length * TRACKS_PER_GENRE;
+  function tracksInGenre(key) {
+    return pools[key].length;
+  }
+
+  var TOTAL_TRACKS = genres.reduce(function (sum, g) {
+    return sum + tracksInGenre(g.key);
+  }, 0);
 
   // ---- persisted state ------------------------------------------------
 
@@ -212,9 +237,14 @@
   function drawTrack(key) {
     var queue = state.queues[key];
     if (!queue || queue.length === 0) {
-      queue = shuffle(Array.from({ length: TRACKS_PER_GENRE }, function (_, i) { return i; }));
+      var n = tracksInGenre(key);
+      queue = shuffle(Array.from({ length: n }, function (_, i) { return i; }));
     }
     var idx = queue.pop();
+    // guard against a stale index from an older, smaller pool
+    if (idx === undefined || idx >= tracksInGenre(key)) {
+      return drawTrack(key);
+    }
     state.queues[key] = queue;
     if (state.seen[key].indexOf(idx) === -1) {
       state.seen[key].push(idx);
@@ -247,13 +277,14 @@
 
   function refreshBadges() {
     genres.forEach(function (g) {
-      var n = state.seen[g.key].length;
+      var total = tracksInGenre(g.key);
+      var n = Math.min(state.seen[g.key].length, total);
       var b = document.getElementById("badge-" + g.key);
       var c = document.getElementById("badge-count-" + g.key);
-      if (c) c.textContent = n + "/" + TRACKS_PER_GENRE;
+      if (c) c.textContent = n + "/" + total;
       if (b) {
         b.classList.toggle("hit", n > 0);
-        b.classList.toggle("complete", n >= TRACKS_PER_GENRE);
+        b.classList.toggle("complete", n >= total);
       }
     });
   }
